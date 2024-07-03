@@ -29,7 +29,7 @@ export default MyComponent;
 <h3>State</h3>
 <p>State is a built-in object in React components used to store data or information about the component's current situation. It is managed within the component and can change over time, usually as a result of user actions or network responses.</p>
 
-```
+```jsx
 import { Component } from "react";
 
 class State extends Component {
