@@ -93,4 +93,22 @@ class ItemList extends Component {
 export default ItemList;
 ```
 
+<h3>How Class Component work under Good</h3>
+<p>In a React class component, the code execution follows a specific order. Here’s a step-by-step breakdown of what runs first and the sequence of operations:</p>
+<br/>
+<h5>Constructor</h5>
+<p>If a constructor is defined,it runs first.</p>
+<p>Initializes state and binds methods.</p>
+
+```jsx
+constructor(props) {
+  super(props);
+  this.state = {
+    count: 0
+  };
+  // Any other initialization code here
+}
+
+```
+<br/>
 </details>
