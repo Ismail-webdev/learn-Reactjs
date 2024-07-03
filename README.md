@@ -93,7 +93,7 @@ class ItemList extends Component {
 export default ItemList;
 ```
 
-<h3>How Class Component work under Good</h3>
+<h3>How Class Component work under Hood</h3>
 <p>In a React class component, the code execution follows a specific order. Here’s a step-by-step breakdown of what runs first and the sequence of operations:</p>
 <br/>
 <h5>Constructor</h5>
