@@ -5,21 +5,17 @@ class Map extends Component {
     super();
 
     this.state = {
-      persons: [
-        {
-          id: 1,
-          name: "Jack",
-        },
-        {
-          id: 2,
-          name: "Lucci",
-        },
-        {
-          id: 3,
-          name: "Hordy",
-        },
-      ],
+      persons: [],
     };
+  }
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((users) =>
+        this.setState(() => {
+          return { persons: users };
+        }, console.log(this.state))
+      );
   }
   render() {
     return (

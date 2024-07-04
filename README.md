@@ -29,7 +29,7 @@ export default MyComponent;
 <h3>State</h3>
 <p>State is a built-in object in React components used to store data or information about the component's current situation. It is managed within the component and can change over time, usually as a result of user actions or network responses.</p>
 
-```
+```jsx
 import { Component } from "react";
 
 class State extends Component {
@@ -91,6 +91,84 @@ class ItemList extends Component {
 }
 
 export default ItemList;
+```
+
+<h3>How Class Component work under Hood</h3>
+<p>In a React class component, the code execution follows a specific order. Here’s a step-by-step breakdown of what runs first and the sequence of operations:</p>
+<h4>1. Constructor</h4>
+<p>If a constructor is defined,it runs first.</p>
+<p>Initializes state and binds methods.</p>
+
+```jsx
+constructor() {
+  super();
+  this.state = {
+    count: 0
+  };
+  // Any other initialization code here
+}
+```
+
+<h4>2. Render Method</h4>
+<p>After the constructor, the render method is called.</p>
+<p>It returns the JSX that defines what should be rendered on the screen.</p>
+
+```jsx
+render() {
+  return (
+    <div>
+      <p>Count: {this.state.count}</p>
+      <button onClick={this.handleIncrement}>Increment</button>
+    </div>
+  );
+}
+
+```
+
+<h4>3. ComponentDidMount</h4>
+<p>Once the initial render is completed and the component is mounted to the DOM, componentDidMount is called.</p>
+<p>This is a good place to make network requests or perform any setup that requires the component to be in the DOM.</p>
+
+```jsx
+componentDidMount() {
+  console.log('Component did mount');
+}
+```
+
+<h4>Example</h4>
+
+```jsx
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  constructor() {
+    super();
+    console.log("Constructor");
+    this.state = {
+      count: 0,
+    };
+  }
+
+  componentDidMount() {
+    console.log("Component did mount");
+  }
+
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    console.log("Render");
+    return (
+      <div>
+        <p>Count: {this.state.count}</p>
+        <button onClick={this.handleIncrement}>Increment</button>
+      </div>
+    );
+  }
+}
+
+export default MyComponent;
 ```
 
 </details>

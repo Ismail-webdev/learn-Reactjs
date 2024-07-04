@@ -1,6 +1,7 @@
 import { Component } from "react";
 import State from "./practice/State";
 import Map from "./practice/Map";
+import Flow from "./practice/Flow";
 
 class ClassComponents extends Component {
   render() {
@@ -8,6 +9,7 @@ class ClassComponents extends Component {
       <div>
         <State />
         <Map />
+        <Flow />
       </div>
     );
   }
