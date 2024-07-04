@@ -95,18 +95,29 @@ export default ItemList;
 
 <h3>How Class Component work under Hood</h3>
 <p>In a React class component, the code execution follows a specific order. Here’s a step-by-step breakdown of what runs first and the sequence of operations:</p>
+<<<<<<< HEAD
 <h4>1. Constructor</h4>
+=======
+<br/>
+<h4>Constructor</h4>
+>>>>>>> 329bbb06e09b590f359f7f4e9bf00c60b76a0e75
 <p>If a constructor is defined,it runs first.</p>
 <p>Initializes state and binds methods.</p>
 
 ```jsx
+<<<<<<< HEAD
 constructor() {
   super();
+=======
+constructor(props) {
+  super(props);
+>>>>>>> 329bbb06e09b590f359f7f4e9bf00c60b76a0e75
   this.state = {
     count: 0
   };
   // Any other initialization code here
 }
+<<<<<<< HEAD
 ```
 
 <h4>2. Render Method</h4>
@@ -172,3 +183,9 @@ export default MyComponent;
 ```
 
 </details>
+=======
+
+```
+<br/>
+</details>
+>>>>>>> 329bbb06e09b590f359f7f4e9bf00c60b76a0e75
